@@ -321,7 +321,7 @@ def main() : #
             except : #
 
                 time.sleep(0.4)
-                print(" error!")
+                print("error!")
             #
         #
 
@@ -337,11 +337,7 @@ def main() : #
         elif code == "clr" : os.system('cls')
 
         ## Help ##
-        elif code.startswith("help") : #
-            
-            print("")
-            Help(code)
-        #
+        elif code.startswith("help") : Help(code)
 
         ## Exit ##
         elif code == "ext" : #
@@ -361,13 +357,13 @@ def newText() : #
 
     data = ["",]
 
-    print("... type #cls to ext\n")
+    print("... type #end to ext\n")
     
     #Get first line
     line = input("<<< ")
 
     #Add to lines
-    while line != "#cls" : #
+    while line != "#end" : #
 
         data.append(line)
         line = input("<<< ")
@@ -385,8 +381,6 @@ def newText() : #
 
 ## Help ##
 def Help(arg) : #
-
-    print("")
 
     sysH = ("""
     sys cmd can do:\n
@@ -456,7 +450,7 @@ def Help(arg) : #
     cmdH = ("""
     cmd cmd can do:\n
     ... use a windows comand with   \n
-    ... "cmd" as prefix             \n
+    ... "cmd" as prefix
     """)
 
     #help sys

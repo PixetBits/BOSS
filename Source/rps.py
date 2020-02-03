@@ -20,11 +20,12 @@ def init() : #
 
     while True: #
 
-        opt = ["r", "p", "s"]
+        opt = ["q", "p", "s"]
+        key = {"q" : "quartz", "p" : "parchment", "s" : "shears"}
 
         print("")
         print(">>> type your option")
-        print("... rock : r | paper : p | scsor : s")
+        print("... quartz : q | parchment : p | shears : s")
 
         BIn = choice("<<< ", opt)
 
@@ -32,85 +33,53 @@ def init() : #
 
         #System option
         sys = rand.choice(opt)
+        print(">>> sys pick " + key[sys])
 
         #Pick rock
-        if BIn == "r" : #
+        if BIn == "q" : #
 
             #Sys pick paper
-            if sys == "r" : #
-
-                print(">>> sys pick rock")
-                print("... draw!")
-            #
+            if sys == "q" : print("... draw!")
 
             #Sys pick 
-            if sys == "p" : #
-
-                print(">>> sys pick paper")
-                print("... sys win!")
-            #
+            if sys == "p" : print("... sys win!")
 
             #Sys pick 
-            if sys == "s" : #
-
-                print(">>> sys pick scsor")
-                print("... you win!")
-            #
-
+            if sys == "s" : print("... you win!")
+		#
+		
         #Pick paper
         if BIn == "p" : #
 
             #Sys pick paper
-            if sys == "r" :
+            if sys == "q" : print("... you win!")
 
-                print(">>> sys pick rock")
-                print("... you win!")
-            #
 
             #Sys pick 
-            if sys == "p" : #
+            if sys == "p" : print("... draw!")
 
-                print(">>> sys pick paper")
-                print("... draw!")
-            #
 
             #Sys pick 
-            if sys == "s" : #
-
-                print(">>> sys pick scsor")
-                print("... sys win!")
-            #
+            if sys == "s" : print("... sys win!")
 
         #Pick rock
         if BIn == "s" : #
 
             #Sys pick paper
-            if sys == "r" : #
-
-                print(">>> sys pick rock")
-                print("... sys win!")
-            #
+            if sys == "q" : print("... sys win!")
 
             #Sys pick 
-            if sys == "p" : #
-
-                print(">>> sys pick paper")
-                print("... you win!")
-            #
+            if sys == "p" : print("... you win!")
 
             #Sys pick 
-            if sys == "s" : #
-
-                print(">>> sys pick scsor")
-                print("... draw!")
-            #
+            if sys == "s" : print("... draw!")
         #
 
 
         print("\n>>> resset game?")
-        end = choice("... (S/n): ", ["s", "n"])
+        end = choice("... (Y/n): ", ["y", "n"])
 
-        if end == "s" : continue
+        if end == "y" : continue
         if end == "n" : break
     #
 #
